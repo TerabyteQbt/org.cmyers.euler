@@ -12,6 +12,12 @@ qbt updatePackage --package org.cmyers.euler.q$1 --prefix q$1 --addQbtEnv JDK=1_
 qbt addPackage --repo org.cmyers.euler --package org.cmyers.euler.q$1.release
 qbt updatePackage --package org.cmyers.euler.q$1.release --prefix q$1 --addQbtEnv JDK=1_8 --addNormalDependency Weak org.cmyers.euler.q$1 --addNormalDependency Weak qbt_fringe.wrapper_generator.release
 
+echo "To add Guava:"
+echo "qbt updatePackage --package org.cmyers.euler.q$1.release --addNormalDependency Strong mc.com.google.guava.guava"
+echo "To add misc1 concurrency lib:"
+echo "qbt updatePackage --package org.cmyers.euler.q$1.release --addNormalDependency Strong misc1.commons.concurrent.main"
+echo ""
+
 mkdir -p q$1/src/org/cmyers/euler/q$1
 echo "package org.cmyers.euler.q$1;" >> q$1/src/org/cmyers/euler/q$1/Main.java
 echo "" >> q$1/src/org/cmyers/euler/q$1/Main.java
