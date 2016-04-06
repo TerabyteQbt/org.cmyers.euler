@@ -12,3 +12,13 @@ qbt updatePackage --package org.cmyers.euler.q$1 --prefix q$1 --addQbtEnv JDK=1_
 qbt addPackage --repo org.cmyers.euler --package org.cmyers.euler.q$1.release
 qbt updatePackage --package org.cmyers.euler.q$1.release --prefix q$1 --addQbtEnv JDK=1_8 --addNormalDependency Weak org.cmyers.euler.q$1 --addNormalDependency Weak qbt_fringe.wrapper_generator.release
 
+mkdir -p q$1/src/org/cmyers/euler/q$1
+echo "package org.cmyers.euler.q$1;" >> q$1/src/org/cmyers/euler/q$1/Main.java
+echo "" >> q$1/src/org/cmyers/euler/q$1/Main.java
+echo "class Main {" >> q$1/src/org/cmyers/euler/q$1/Main.java
+echo "    public static final void main(String[] args) {" >> q$1/src/org/cmyers/euler/q$1/Main.java
+echo "        System.out.println(\"Problem $1\");" >> q$1/src/org/cmyers/euler/q$1/Main.java
+echo "    }" >> q$1/src/org/cmyers/euler/q$1/Main.java
+echo "}" >> q$1/src/org/cmyers/euler/q$1/Main.java
+echo "" >> q$1/src/org/cmyers/euler/q$1/Main.java
+
